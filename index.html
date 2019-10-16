@@ -59,7 +59,7 @@
 
     function makeListFromObject(obj) {
         const ul = document.createElement('ul');
-        for (key in obj) {
+        for (let key in obj) {
             let li = document.createElement('li');
             li.textContent = `${key}`;
             if (typeof obj[key] === 'object') {
