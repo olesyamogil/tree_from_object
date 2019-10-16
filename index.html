@@ -57,22 +57,7 @@
         }
     };
 
-    function makeListFromObject(obj) {
-        const ul = document.createElement('ul');
-        for (let key in obj) {
-            let li = document.createElement('li');
-            li.textContent = `${key}`;
-            if (typeof obj[key] === 'object') {
-                li.append(makeListFromObject(obj[key]));
-            }
-            ul.append(li);
-        }
-        return ul;
-    }
-
-    function createTree(container, data) {
-        container.append(makeListFromObject(data));
-    }
+    
 
     createTree(document.getElementById('tree'), data);
 </script>
